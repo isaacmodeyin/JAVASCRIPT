@@ -1,0 +1,95 @@
+<!-- 
+
+
+
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Voter Eligibility Checker</title>
+    <script src="script.js"></script>
+</head>
+
+<body>
+    <h1>Voter Eligibility Checker</h1>
+
+    <form>
+        <label for="dob">Date of Birth:</label>
+        <input type="date" id="dob" required>
+        <button type="button" onclick="checkEligibility()">Check Eligibility</button>
+    </form>
+
+    <div id="result"></div>
+
+    <script>
+        function checkEligibility() {
+            const dobInput = document.getElementById('dob');
+            const dateOfBirth = dobInput.value;
+
+            const resultDiv = document.getElementById('result');
+            const eligibility = checkVotingAge(dateOfBirth);
+            resultDiv.textContent = eligibility;
+        }
+
+        function checkVotingAge(dateOfBirth) {
+            const currentDate = new Date();
+            const birthDate = new Date(dateOfBirth);
+            const age = currentDate.getFullYear() - birthDate.getFullYear();
+
+            if (currentDate.getMonth() < birthDate.getMonth() ||
+                (currentDate.getMonth() === birthDate.getMonth() && currentDate.getDate() < birthDate.getDate())) {
+                age--;
+            }
+
+            if (age >= 18) {
+                return "Eligible to vote";
+            } else {
+                return "Not eligible to vote";
+            }
+        }
+    </script>
+</body>
+
+</html> -->
+
+
+
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form>
+        <input id="age" placeholder="Enter your age" type="number">
+        <select name="" id="sel"></select>
+    </form>
+
+     <script src="basics.js"></script> -->
+<!-- <script src="iteration.js"></script> -->
+<!-- <script src="index.js"></script> -->
+<!-- <script src="function.js"></script>
+<script src="events.js"></script>
+
+</body>
+
+</html>  -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="">
+        <input type="text">
+    </form>
+</body>
+</html>
